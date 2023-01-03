@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyShareService } from '../my-share.service';
 
 @Component({
   selector: 'app-event-binding',
@@ -11,8 +12,9 @@ export class EventBindingComponent {
   count : string ="0";
   xCoords : number = 0;
   yCoords : number =0;
-  constructor(){
 
+  constructor(private service : MyShareService){
+    
   }
 
   increment(){

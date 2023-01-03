@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//deze imports handmatig nodig want vindt dit niet...
+import {HttpClientModule} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
@@ -22,6 +25,7 @@ import { NavComponent } from './nav/nav.component';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: "property", component: PropertyBindingComponent},
       { path: "event", component: EventBindingComponent},
