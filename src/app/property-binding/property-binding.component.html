@@ -1,0 +1,8 @@
+<div class="box">
+    <figure class="image">
+        <img [src] = "imageURL" alt="Image">
+        <select class="form-control" name="Images" id="imageChoice" [(ngModel)]="choice" (change)="changeImage()">
+            <option *ngFor="let image of images" value="{{image}}">Image {{image}}</option>
+        </select>
+      </figure>
+  </div>

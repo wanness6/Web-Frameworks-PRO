@@ -1,0 +1,28 @@
+<!--html voor lijstje-->
+<div class="box">
+    <h1>Todo lijstje</h1>
+    <p *ngIf="isEmpty">lijstje is leeg</p>
+    <table>
+        <tr *ngFor="let item of lijstje; let i = index" >
+            <td>{{item.id}}.</td>
+            <td>{{item.name}}</td>
+            <button (click)="delete(i)">X</button>
+        </tr>
+    </table>
+    <input #in1 type="text" placeholder="Geef hier je item in" (input)="checkInput()">
+    <button (click)="pushItem(in1.value)" [disabled]="state">Voeg toe</button>
+</div>
+
+<!--html voor movie-->
+<div class="box">
+    <video #myVideo width={{width}} height={{height}} controls (play)="playState()" (pause)="pauseState()"> 
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </video>
+    <select name="resolution" id="reso" (change)="changeResolution($event)">
+        <option value="640x400">640x400</option>
+        <option value="800x600">800x600</option>
+        <option value="1024x800">1024x800</option>
+    </select>
+    <button [disabled]="!state2" (click)="myVideo.play()" (click)="playState()">PLAY</button>
+    <button [disabled]="state2" (click)="myVideo.pause()" (click)="pauseState()">PAUSE</button>
+</div>

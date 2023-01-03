@@ -1,0 +1,16 @@
+<!--voor de persoonsinfo te tonen-->
+<div class="box">
+    <input class="input is-rounded" type="text" placeholder="Voornaam" [(ngModel)] ="firstName">
+    <input class="input is-rounded" type="text" placeholder="Achternaam" [(ngModel)] ="lastName">
+    <input class="input is-rounded" type="text" placeholder="Straat" [(ngModel)] ="streetName">
+    <input class="input is-rounded" type="text" placeholder="Huisnr" [(ngModel)] ="houseNr">
+    <input class="input is-rounded" type="text" placeholder="Stad" [(ngModel)] ="city">
+    <button class="danger" (click)="showText()">bewaren</button>
+    <div *ngIf="state">
+    <p *ngIf="firstName !=''">{{firstName}}</p>
+    <p *ngIf="lastName !=''">{{lastName}}</p>
+    <p *ngIf="streetName !=''">{{streetName}}</p>
+    <p *ngIf="houseNr !=''">{{houseNr}}</p>
+    <p *ngIf="city !=''">{{city}}</p>
+    </div>
+</div>
